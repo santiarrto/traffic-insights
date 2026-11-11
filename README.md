@@ -92,8 +92,6 @@ Revisión del archivo local `data/raw/LESIONES_ACCIDENTES_DE_TRÁNSITO_20261111.
 - Hay 294.354 filas idénticas a una fila anterior en los seis campos disponibles. No hay un identificador de víctima o hecho que permita concluir que sean duplicados indebidos: no eliminarlas automáticamente.
 - Hay 34 códigos de departamento y 1.089 de municipio distintos, incluido el código `0` de ubicación **SIN ESTABLECER**. Este aparece en tres filas con una cantidad total de cinco; las demás filas tienen códigos de dos y cinco dígitos, respectivamente. La comparación con las capas seleccionadas se describe abajo.
 
-Estas observaciones describen únicamente el archivo examinado, no garantizan la cobertura efectiva ni la ausencia de otros problemas de calidad. La descarga directa falló durante la revisión con errores HTTP 500 y 503; el archivo analizado fue suministrado localmente.
-
 ### Geometrías para el mapa
 
 Se seleccionaron las capas del Marco Geoestadístico Nacional (MGN) 2025 publicadas en el catálogo del DANE: [departamentos](https://services.arcgis.com/ioNRSZMYYlx0PUaB/arcgis/rest/services/MGN2025_DPTO_POLITICO/FeatureServer/0) y [municipios](https://services.arcgis.com/ioNRSZMYYlx0PUaB/arcgis/rest/services/MGN2025_MPIO_GRAFICO/FeatureServer/0). Las capas se descargaron en GeoJSON con coordenadas WGS84 y se validaron sus códigos, estructura de polígonos, anillos y rangos de coordenadas; no se ha verificado su topología.
