@@ -1,0 +1,25 @@
+# Local data
+/data/raw/
+/data/geo/
+
+# Python environments and generated files
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# Local DuckDB databases
+*.duckdb
+*.duckdb.wal

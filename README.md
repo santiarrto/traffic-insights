@@ -10,7 +10,7 @@ Transformar datos de accidentes en información visual y fácil de consultar, co
 
 - Cargar archivos CSV descargados y reemplazados manualmente desde las fuentes públicas.
 - Validar y preparar los datos antes de analizarlos.
-- Priorizar un tablero de víctimas por departamento y municipio, con indicadores y visualizaciones según los campos disponibles.
+- Priorizar un tablero local con un total de víctimas y un mapa por departamento y municipio.
 - Dejar el análisis de accidentes en Acacías para una etapa posterior y mantenerlo separado del tablero de víctimas.
 - Documentar las fuentes, su cobertura y las limitaciones de los datos.
 
@@ -34,3 +34,5 @@ Este enfoque permite validar el producto rápidamente. La forma de despliegue es
 ## Estado
 
 Proyecto en definición. Se han elegido las tecnologías y las fuentes iniciales, pero todavía no hay una implementación ni instrucciones de ejecución.
+
+El alcance y las reglas para agentes están en [AGENTS.md](AGENTS.md); las tareas y sus prerrequisitos se encuentran en [TASKS.md](TASKS.md) y [PLANNING.md](PLANNING.md).
