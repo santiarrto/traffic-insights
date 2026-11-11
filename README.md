@@ -1,14 +1,14 @@
-# Traffic Insights
+# 🚦 Traffic Insights
 
 Proyecto para que el público general explore información sobre accidentes de tránsito en Colombia y obtenga insights a partir de archivos planos.
 
-## Objetivo
+## 🎯 Objetivo
 
 Transformar datos de accidentes en información visual y fácil de consultar, con la posibilidad de identificar patrones por ubicación, fecha y otras variables disponibles en los archivos.
 
-Este proyecto tiene un propósito exclusivamente académico.
+🎓 Este proyecto tiene un propósito exclusivamente académico.
 
-## Alcance inicial propuesto
+## 🚀 Alcance inicial propuesto
 
 - Cargar archivos CSV descargados y reemplazados manualmente desde las fuentes públicas.
 - Validar y preparar los datos antes de analizarlos.
@@ -18,41 +18,41 @@ Este proyecto tiene un propósito exclusivamente académico.
 
 Los resultados dependen de la calidad y cobertura de los datos; un mayor número de registros no implica necesariamente un mayor riesgo.
 
-## Vistas del tablero
+## 🖼️ Vistas del tablero
 
 Las capturas muestran el archivo local examinado; los resultados cambian al actualizar los datos.
 
-### Total y mapa departamental
+### 🗺️ Total y mapa departamental
 
 Total de víctimas, periodo disponible y distribución por departamento. Al pasar el cursor se consulta la cantidad de una zona.
 
 ![Total de víctimas y mapa departamental de Colombia](docs/images/captura%201.png)
 
-### Mapa municipal
+### 📍 Mapa municipal
 
 Distribución por municipio dentro del departamento seleccionado; el ejemplo muestra Antioquia.
 
 ![Mapa de víctimas por municipio en Antioquia](docs/images/captura%202.png)
 
-### Evolución anual
+### 📈 Evolución anual
 
 Víctimas por año, variación respecto al año anterior y advertencia sobre periodos observados parciales.
 
 ![Gráfico y tabla de evolución anual de víctimas](docs/images/captura%203.png)
 
-### Patrones temporales
+### 🗓️ Patrones temporales
 
 Recuentos agregados por mes y por día de la semana para todos los años disponibles.
 
 ![Gráficos de víctimas por mes y día de la semana](docs/images/captura%204.png)
 
-### Ranking geográfico
+### 🏆 Ranking geográfico
 
 Los diez códigos con mayores recuentos, con opción de consultar departamentos o municipios.
 
 ![Ranking de víctimas por departamento](docs/images/captura%205.png)
 
-### Comparación entre departamentos
+### 📊 Comparación entre departamentos
 
 Comparación anual de los departamentos seleccionados; el ejemplo incluye Antioquia, Bogotá D.C. y Valle del Cauca.
 
@@ -60,7 +60,7 @@ Comparación anual de los departamentos seleccionados; el ejemplo incluye Antioq
 
 Las capturas del mapa usan geometrías del DANE y mapa base de OpenStreetMap/CARTO. Antes de publicarlas, confirmar las condiciones específicas de uso descritas en [Geometrías para el mapa](#geometrías-para-el-mapa).
 
-## Fuentes de datos
+## 📚 Fuentes de datos
 
 - [Accidentes Viales](https://www.datos.gov.co/Transporte/Accidentes-Viales/yu3i-jau4/about_data): accidentes registrados en el municipio de Acacías, Meta. Incluye fecha, ubicación, vehículos involucrados, heridos y muertes.
 - [Lesiones accidentes de tránsito](https://www.datos.gov.co/Seguridad-y-Defensa/LESIONES-ACCIDENTES-DE-TR-NSITO/ntej-qq7v/about_data): datos medidos en víctimas, con fecha, departamento, municipio y cantidad.
@@ -106,16 +106,21 @@ Se seleccionaron las capas del Marco Geoestadístico Nacional (MGN) 2025 publica
 
 Las fichas de estas capas no declaran una licencia específica. Los [términos generales del DANE](https://www.dane.gov.co/index.php/terminos-y-condiciones) autorizan el uso y la transformación de información del portal con la cita textual «Fuente: Departamento Administrativo Nacional de Estadística: www.dane.gov.co». Debe confirmarse su aplicación a estas capas y cualquier condición adicional antes de redistribuirlas o publicar el tablero.
 
-## Enfoque tecnológico
+## 🛠️ Tecnologías utilizadas
 
-- **Python** para la preparación y el análisis de datos.
-- **DuckDB** para consultar los archivos y calcular indicadores.
-- **Streamlit** para construir un tablero web interactivo.
-- **Altair** para los gráficos estadísticos.
+- 🐍 **Python 3.13:** lenguaje principal para cargar y validar los CSV, preparar los datos y ejecutar el tablero.
+- 🦆 **DuckDB:** motor analítico utilizado para calcular los totales y agregados temporales y geográficos.
+- 🖥️ **Streamlit:** interfaz web local que permite seleccionar archivos, explorar mapas y consultar indicadores.
+- 🗺️ **Pydeck:** visualización interactiva de las geometrías departamentales y municipales.
+- ✂️ **Shapely:** simplificación de copias de las geometrías para su visualización, sin modificar los archivos originales.
+- 📊 **Altair:** gráficos de evolución anual, patrones temporales, rankings y comparaciones entre departamentos.
+- 📦 **ijson:** lectura incremental de GeoJSON para procesar capas grandes sin cargar el archivo completo a la vez.
+- 🧪 **pytest:** pruebas automatizadas de carga, cálculos, geometrías y funcionamiento del tablero.
+- ⚙️ **pip y entornos virtuales:** instalación aislada de las dependencias definidas en `pyproject.toml`; `requirements-lock.txt` fija las versiones comprobadas en Windows.
 
 Este enfoque permite validar el producto rápidamente. La forma de despliegue está pendiente de definición; la actualización automática de los archivos podrá evaluarse más adelante.
 
-## Preparación local
+## ⚙️ Preparación local
 
 Se requieren [Python 3.13](https://www.python.org/downloads/), pip y conexión a internet para instalar dependencias y descargar los datos. El mapa base también necesita conexión. La instalación y el archivo de versiones se comprobaron en Windows de 64 bits; macOS y Linux no se han probado.
 
@@ -233,7 +238,7 @@ En macOS o Linux:
 .venv/bin/python -m pytest -q -p no:cacheprovider tests
 ```
 
-## Estado
+## ✅ Estado
 
 El tablero local, la carga de datos, los indicadores y la preparación geográfica están implementados.
 
