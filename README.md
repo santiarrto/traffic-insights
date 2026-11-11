@@ -6,6 +6,8 @@ Proyecto para que el público general explore información sobre accidentes de t
 
 Transformar datos de accidentes en información visual y fácil de consultar, con la posibilidad de identificar patrones por ubicación, fecha y otras variables disponibles en los archivos.
 
+Este proyecto tiene un propósito exclusivamente académico.
+
 ## Alcance inicial propuesto
 
 - Cargar archivos CSV descargados y reemplazados manualmente desde las fuentes públicas.
